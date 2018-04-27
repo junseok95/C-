@@ -1,101 +1,103 @@
 /*
 
-private : µ¿ÀÏÇÑ Å¬·¡½ºÀÇ ¸â¹ö ÇÔ¼ö¿¡¸¸ Á¦ÇÑÇÔ
-public : ¸ðµç ´Ù¸¥ Å¬·¡½º¿¡ Çã¿ë
-protected : Å¬·¡½º ÀÚ½Å°ú »ó¼Ó¹ÞÀº ÀÚ½Ä Å¬·¡½º¿¡¸¸ Çã¿ë
+private : ë™ì¼í•œ í´ëž˜ìŠ¤ì˜ ë©¤ë²„ í•¨ìˆ˜ì—ë§Œ ì œí•œí•¨
+public : ëª¨ë“  ë‹¤ë¥¸ í´ëž˜ìŠ¤ì— í—ˆìš©
+protected : í´ëž˜ìŠ¤ ìžì‹ ê³¼ ìƒì†ë°›ì€ ìžì‹ í´ëž˜ìŠ¤ì—ë§Œ í—ˆìš©
 
-¸â¹öº¯¼ö´Â private·Î ÁöÁ¤ÇØ¾ßÇÔ.
-»ý¼ºÀÚ¿¡¼­ ¾Æ¹« »ó°ü¾øÀÌ È£Ãâ °¡´ÉÇÔ
-private ÇÔ¼ö´Â main¿¡¼­ ºÒ·¯ ¿Ã ¼ö ¾øÀ½
+ë©¤ë²„ë³€ìˆ˜ëŠ” privateë¡œ ì§€ì •í•´ì•¼í•¨.
+ìƒì„±ìžì—ì„œ ì•„ë¬´ ìƒê´€ì—†ì´ í˜¸ì¶œ ê°€ëŠ¥í•¨
+private í•¨ìˆ˜ëŠ” mainì—ì„œ ë¶ˆëŸ¬ ì˜¬ ìˆ˜ ì—†ìŒ
 
-ÀÎ¶óÀÎ ÇÔ¼ö
-inline Å°¿öµå·Î ¼±¾ðµÈ ÇÔ¼ö
-ÀÎ¶óÀÎ ÇÔ¼ö¿¡ ´ëÇÑ Ã³¸®
-ÀÎ¶óÀÎ ÇÔ¼ö¸¦ È£ÃâÇÏ´Â °÷¿¡ ÀÎ¶óÀÎ ÇÔ¼ö ÄÚµå¸¦ È®Àå »ðÀÔ
-¸ÅÅ©·Î¿Í À¯»ç
-ÄÚµå È®Àå ÈÄ ÀÎ¶óÀÎ ÇÔ¼ö´Â »ç¶óÁü
-ÀÎ¶óÀÎ ÇÔ¼ö È£Ãâ
-ÇÔ¼ö È£Ãâ¿¡ µû¸¥ ¿À¹öÇìµå Á¸ÀçÇÏÁö ¾ÊÀ½
-ÇÁ·Î±×·¥ÀÇ ½ÇÇà ¼Óµµ °³¼±
-ÄÄÆÄÀÏ·¯¿¡ ÀÇÇØ ÀÌ·ç¾îÁü
-ÀÎ¶óÀÎ ÇÔ¼öÀÇ ¸ñÀû
-c++ ÇÁ·Î±×·¥ÀÇ ½ÇÇà ¼Óµµ Çâ»ó
-ÀÚÁÖ È£ÃâµÇ´Â ÂªÀº ÄÚµåÀÇ ÇÔ¼ö È£Ãâ¿¡ ´ëÇÑ ½Ã°£ ¼Ò¸ð¸¦ ÁÙÀÓ
-c++¿¡´Â ÂªÀº ÄÚµåÀÇ ¸â¹ö ÇÔ¼ö°¡ ¸¹±â ¶§¹®
+ì¸ë¼ì¸ í•¨ìˆ˜
+inline í‚¤ì›Œë“œë¡œ ì„ ì–¸ëœ í•¨ìˆ˜
+ì¸ë¼ì¸ í•¨ìˆ˜ì— ëŒ€í•œ ì²˜ë¦¬
+ì¸ë¼ì¸ í•¨ìˆ˜ë¥¼ í˜¸ì¶œí•˜ëŠ” ê³³ì— ì¸ë¼ì¸ í•¨ìˆ˜ ì½”ë“œë¥¼ í™•ìž¥ ì‚½ìž…
+ë§¤í¬ë¡œì™€ ìœ ì‚¬
+ì½”ë“œ í™•ìž¥ í›„ ì¸ë¼ì¸ í•¨ìˆ˜ëŠ” ì‚¬ë¼ì§
+ì¸ë¼ì¸ í•¨ìˆ˜ í˜¸ì¶œ
+í•¨ìˆ˜ í˜¸ì¶œì— ë”°ë¥¸ ì˜¤ë²„í—¤ë“œ ì¡´ìž¬í•˜ì§€ ì•ŠìŒ
+í”„ë¡œê·¸ëž¨ì˜ ì‹¤í–‰ ì†ë„ ê°œì„ 
+ì»´íŒŒì¼ëŸ¬ì— ì˜í•´ ì´ë£¨ì–´ì§
+ì¸ë¼ì¸ í•¨ìˆ˜ì˜ ëª©ì 
+c++ í”„ë¡œê·¸ëž¨ì˜ ì‹¤í–‰ ì†ë„ í–¥ìƒ
+ìžì£¼ í˜¸ì¶œë˜ëŠ” ì§§ì€ ì½”ë“œì˜ í•¨ìˆ˜ í˜¸ì¶œì— ëŒ€í•œ ì‹œê°„ ì†Œëª¨ë¥¼ ì¤„ìž„
+c++ì—ëŠ” ì§§ì€ ì½”ë“œì˜ ë©¤ë²„ í•¨ìˆ˜ê°€ ë§Žê¸° ë•Œë¬¸
 
-c++ ±¸Á¶Ã¼ (´Ü¼øÈ÷ Á¤º¸¸¸À» ÀúÀå ÇÏ·Á°í ÇÒ¶§)
-»ó¼Ó, ¸â¹ö, Á¢±Ù ÁöÁ¤ µî ¸ðµç°ÍÀÌ Å¬·¡½º¿Í µ¿ÀÏ
-Å¬·¡½º¿Í À¯ÀÏÇÏ°Ô ´Ù¸¥ Á¡
-±¸Á¶Ã¼ÀÇ µðÆúÆ® Á¢±Ù ÁöÁ¤ - public
-Å¬·¡½ºÀÇ µðÆúÆ® Á¢±Ù ÁöÁ¤ - private
-c++¿¡¼­ ±¸Á¶Ã¼¸¦ ¼ö¿ëÇÑ ÀÌÀ¯
-c¾ð¾î¿ÍÀÇ È£È¯¼º ¶§¹®
-cÀÇ ±¸Á¶Ã¼ 100% È£È¯ ¼ö¿ë
-c¼Ò½º¸¦ ±×´ë·Î °¡Á®´Ù ¾²±â À§ÇØ
-±¸Á¶Ã¼ °´Ã¼ »ý¼º
-struct Å°¿öµå »ý·«
-structName stObj; (c++ ±¸Á¶Ã¼ °´Ã¼ »ý¼º)
+c++ êµ¬ì¡°ì²´ (ë‹¨ìˆœížˆ ì •ë³´ë§Œì„ ì €ìž¥ í•˜ë ¤ê³  í• ë•Œ)
+ìƒì†, ë©¤ë²„, ì ‘ê·¼ ì§€ì • ë“± ëª¨ë“ ê²ƒì´ í´ëž˜ìŠ¤ì™€ ë™ì¼
+í´ëž˜ìŠ¤ì™€ ìœ ì¼í•˜ê²Œ ë‹¤ë¥¸ ì 
+êµ¬ì¡°ì²´ì˜ ë””í´íŠ¸ ì ‘ê·¼ ì§€ì • - public
+í´ëž˜ìŠ¤ì˜ ë””í´íŠ¸ ì ‘ê·¼ ì§€ì • - private
+c++ì—ì„œ êµ¬ì¡°ì²´ë¥¼ ìˆ˜ìš©í•œ ì´ìœ 
+cì–¸ì–´ì™€ì˜ í˜¸í™˜ì„± ë•Œë¬¸
+cì˜ êµ¬ì¡°ì²´ 100% í˜¸í™˜ ìˆ˜ìš©
+cì†ŒìŠ¤ë¥¼ ê·¸ëŒ€ë¡œ ê°€ì ¸ë‹¤ ì“°ê¸° ìœ„í•´
+êµ¬ì¡°ì²´ ê°ì²´ ìƒì„±
+struct í‚¤ì›Œë“œ ìƒëžµ
+structName stObj; (c++ êµ¬ì¡°ì²´ ê°ì²´ ìƒì„±)
 
-Æ÷ÀÎÅÍ
-Æ÷ÀÎÅÍ´Â ¸Þ¸ð¸®¿¡ ÀÖ´Â ÁÖ¼Ò°ªÀ» ¹Þ¾Æ¿À±â ¶§¹®¿¡ intÀÚ·áÇüÀ» ¹Þ¾Æ¿Â´Ù.
-°´Ã¼ÀÇ ÁÖ¼Ò °ªÀ» °¡Áö´Â º¯¼ö
-Æ÷ÀÎÅÍ·Î ¸â¹ö¸¦ Á¢±ÙÇÒ ¶§
-°´Ã¼Æ÷ÀÎÅÍ -> ¸â¹ö
+í¬ì¸í„°
+í¬ì¸í„°ëŠ” ë©”ëª¨ë¦¬ì— ìžˆëŠ” ì£¼ì†Œê°’ì„ ë°›ì•„ì˜¤ê¸° ë•Œë¬¸ì— intìžë£Œí˜•ì„ ë°›ì•„ì˜¨ë‹¤.
+ê°ì²´ì˜ ì£¼ì†Œ ê°’ì„ ê°€ì§€ëŠ” ë³€ìˆ˜
+í¬ì¸í„°ë¡œ ë©¤ë²„ë¥¼ ì ‘ê·¼í•  ë•Œ
+ê°ì²´í¬ì¸í„° -> ë©¤ë²„
 
 Circle donut;
-//Circle* r; // Æ÷ÀÎÅÍ º¯¼ö, ¼öÁ¤ °¡´É, ¼±¾ðÇÒ¶§ ´ë»óÀ» ÁöÁ¤ÇÏÁö ¾ÊÀ½
-//Circle r = donut; // ·¹ÆÛ·±½º º¯¼ö, ¼öÁ¤ ºÒ°¡´É, ¼±¾ðÇÒ¶§ ´ë»óÀ» ¹Ýµå½Ã ÁöÁ¤ÇØ¾ßÇÔ
+//Circle* r; // í¬ì¸í„° ë³€ìˆ˜, ìˆ˜ì • ê°€ëŠ¥, ì„ ì–¸í• ë•Œ ëŒ€ìƒì„ ì§€ì •í•˜ì§€ ì•ŠìŒ
+//Circle r = donut; // ë ˆí¼ëŸ°ìŠ¤ ë³€ìˆ˜, ìˆ˜ì • ë¶ˆê°€ëŠ¥, ì„ ì–¸í• ë•Œ ëŒ€ìƒì„ ë°˜ë“œì‹œ ì§€ì •í•´ì•¼í•¨
 double d = donut.getArea();
 
-Circle *p; // °´Ã¼¿¡ ´ëÇÑ Æ÷ÀÎÅÍ ¼±¾ð
-p=&donut; // Æ÷ÀÎÅÍ¿¡ °´Ã¼ ÁÖ¼Ò ÀúÀå
-d=p->getArea(); // ¸â¹ö ÇÔ¼ö È£Ãâ
+Circle *p; // ê°ì²´ì— ëŒ€í•œ í¬ì¸í„° ì„ ì–¸
+p=&donut; // í¬ì¸í„°ì— ê°ì²´ ì£¼ì†Œ ì €ìž¥
+d=p->getArea(); // ë©¤ë²„ í•¨ìˆ˜ í˜¸ì¶œ
 
-°´Ã¼ ¹è¿­ ¼±¾ð °¡´É
-±âº» Å¸ÀÔ ¹è¿­ ¼±¾ð°ú Çü½Ä µ¿ÀÏ
-int n[3]; // Á¤¼öÇü ¹è¿­ ¼±¾ð
-Circle c[3]; // Circle Å¸ÀÔÀÇ ¹è¿­ ¼±¾ð
+ê°ì²´ ë°°ì—´ ì„ ì–¸ ê°€ëŠ¥
+ê¸°ë³¸ íƒ€ìž… ë°°ì—´ ì„ ì–¸ê³¼ í˜•ì‹ ë™ì¼
+int n[3]; // ì •ìˆ˜í˜• ë°°ì—´ ì„ ì–¸
+Circle c[3]; // Circle íƒ€ìž…ì˜ ë°°ì—´ ì„ ì–¸
 
-°´Ã¼ ¹è¿­ ¼±¾ð
-°´Ã¼ ¹è¿­À» À§ÇÑ °ø°£ ÇÒ´ç
-¹è¿­ÀÇ °¢ ¿ø¼Ò °´Ã¼¸¶´Ù »ý¼ºÀÚ ½ÇÇà
-c[0]ÀÇ »ý¼ºÀÚ, c[1]ÀÇ »ý¼ºÀÚ, c[2]ÀÇ »ý¼ºÀÚ ½ÇÇà
-¸Å°³ º¯¼ö ÀÖ´Â »ý¼ºÀÚ¸¦ È£ÃâÇÒ ¼ö ¾øÀ½
-Circle circleArray[3](5); // ¿À·ù
-¹è¿­ ¼Ò¸ê
-¹è¿­ÀÇ °¢ °³Ã¼¸¶´Ù ¼Ò¸êÀÚ È£Ãâ, »ý¼ºÀÇ ¹Ý´ë¼øÀ¸·Î ¼Ò¸ê
-c[2]ÀÇ ¼Ò¸êÀÚ, c[1]ÀÇ ¼Ò¸êÀÚ, c[0]ÀÇ ¼Ò¸êÀÚ ½ÇÇà
-°´Ã¼ ¹è¿­ ÃÊ±âÈ­ ¹æ¹ý
-¹è¿­ÀÇ °¢ ¿ø¼Ò °³Ã¼´ç »ý¼ºÀÚ ÁöÁ¤ÇÏ´Â ¹æ¹ý
+ê°ì²´ ë°°ì—´ ì„ ì–¸
+ê°ì²´ ë°°ì—´ì„ ìœ„í•œ ê³µê°„ í• ë‹¹
+ë°°ì—´ì˜ ê° ì›ì†Œ ê°ì²´ë§ˆë‹¤ ìƒì„±ìž ì‹¤í–‰
+c[0]ì˜ ìƒì„±ìž, c[1]ì˜ ìƒì„±ìž, c[2]ì˜ ìƒì„±ìž ì‹¤í–‰
+ë§¤ê°œ ë³€ìˆ˜ ìžˆëŠ” ìƒì„±ìžë¥¼ í˜¸ì¶œí•  ìˆ˜ ì—†ìŒ
+Circle circleArray[3](5); // ì˜¤ë¥˜
+ë°°ì—´ ì†Œë©¸
+ë°°ì—´ì˜ ê° ê°œì²´ë§ˆë‹¤ ì†Œë©¸ìž í˜¸ì¶œ, ìƒì„±ì˜ ë°˜ëŒ€ìˆœìœ¼ë¡œ ì†Œë©¸
+c[2]ì˜ ì†Œë©¸ìž, c[1]ì˜ ì†Œë©¸ìž, c[0]ì˜ ì†Œë©¸ìž ì‹¤í–‰
+ê°ì²´ ë°°ì—´ ì´ˆê¸°í™” ë°©ë²•
+ë°°ì—´ì˜ ê° ì›ì†Œ ê°œì²´ë‹¹ ìƒì„±ìž ì§€ì •í•˜ëŠ” ë°©ë²•
 Circle circleArray[3] = { Circle(10), Circle(20), Circle()};
-Æ÷ÀÎÅÍ¿¡ µ¿ÀûÇÒ´ç ÇÏ´Â¹ý
+í¬ì¸í„°ì— ë™ì í• ë‹¹ í•˜ëŠ”ë²•
 Circle* p[1000];
 for (int i=0; i<1000; i++)
-p[i] = new Circle(i); // Circle(¹ÝÁö¸§°ª)
+p[i] = new Circle(i); // Circle(ë°˜ì§€ë¦„ê°’)
 
 for (int i=0; i<1000; i++)
-delete p[i]; // ¹è¿­ ´ë»óÀ» °¢°¢ Áö¿ö¾ß ÇÔ
+delete p[i]; // ë°°ì—´ ëŒ€ìƒì„ ê°ê° ì§€ì›Œì•¼ í•¨
 */
 /* #include <iostream>
 using namespace std;
 
 class Circle{
-int radius;
-public:
-Circle(){radius = 1;}
-Circle(int r) {radiuse = r;}
-double getArea();
+  int radius;
+  public:
+  Circle(){radius = 1;}
+  Circle(int r) {radius = r;}
+  double getArea();
+};
+double Circle::getArea()
+{
+  return 3.14*radius*radus;
 }
-double Circle::getArea)_{
-return 3.14*radius*radus;
-}
 
-int main(){
-Circle donut;
-Circle pizza(30);
+int main()
+{
+  Circle donut;
+  Circle pizza(30);
 
-//°´Ã¼ ÀÌ¸§À¸·Î ¸â¹ö Á¢±Ù
-cout << donut.getArea() << endl;
+//ê°ì²´ ì´ë¦„ìœ¼ë¡œ ë©¤ë²„ ì ‘ê·¼
+  cout << donut.getArea() << endl;
 
-//°´Ã¼ Æ÷ÀÎÅÍ·Î ¸â¹ö Á¢±Ù
+//ê°ì²´ í¬ì¸í„°ë¡œ ë©¤ë²„ ì ‘ê·¼
 */
