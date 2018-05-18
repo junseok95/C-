@@ -1,4 +1,4 @@
-// ¹è¿­Àº ·¹ÆÛ·±½º Á¤º¸°¡ ³Ñ¾î°£´Ù.
+// ë°°ì—´ì€ ë ˆí¼ëŸ°ìŠ¤ ì •ë³´ê°€ ë„˜ì–´ê°„ë‹¤.
 
 //int* average(const int a[], int size)
 //{
@@ -11,27 +11,27 @@
 //	return result;
 //}
 
-//°¡±ÞÀû ÂüÁ¶¸®ÅÏ »ç¿ëÇÏÁö ¸» °Í
-//ÂüÁ¶¸®ÅÏÀÌ¶õ?
-//¹ÝÈ¯Çü¿¡ ·¹ÆÛ·±½º º¯¼ö »ç¿ë
-//ex) Áö¿ªº¯¼ö°¡ stack°ø°£¿¡ ÀÖ±â ¶§¹®¿¡ Áö¿öÁö°Ô µÊ, Àß¸øµÈ »ç¿ë
-//°ªÀÌ °è¼Ó ³²¾Æ ÀÖÀ» ¼ö ÀÖ´Â Àü¿ªº¯¼ö¸¦ »ç¿ëÇÒ°Í
-//Á¤Àû Áö¿ªº¯¼ö È¤Àº Á¤Àû Àü¿ªº¯¼ö »ç¿ëÇÒ °Í 
+//ê°€ê¸‰ì  ì°¸ì¡°ë¦¬í„´ ì‚¬ìš©í•˜ì§€ ë§ ê²ƒ
+//ì°¸ì¡°ë¦¬í„´ì´ëž€?
+//ë°˜í™˜í˜•ì— ë ˆí¼ëŸ°ìŠ¤ ë³€ìˆ˜ ì‚¬ìš©
+//ex) ì§€ì—­ë³€ìˆ˜ê°€ stackê³µê°„ì— ìžˆê¸° ë•Œë¬¸ì— ì§€ì›Œì§€ê²Œ ë¨, ìž˜ëª»ëœ ì‚¬ìš©
+//ê°’ì´ ê³„ì† ë‚¨ì•„ ìžˆì„ ìˆ˜ ìžˆëŠ” ì „ì—­ë³€ìˆ˜ë¥¼ ì‚¬ìš©í• ê²ƒ
+//ì •ì  ì§€ì—­ë³€ìˆ˜ í˜¹ì€ ì •ì  ì „ì—­ë³€ìˆ˜ ì‚¬ìš©í•  ê²ƒ 
 //int& average(...)
 //{
 //	int sum = 0;
 //	...
 //	int avg = sum / size;
-//  static int avg = sum/size; //Á¤Àû º¯¼ö »ç¿ë
+//  static int avg = sum/size; //ì •ì  ë³€ìˆ˜ ì‚¬ìš©
 //	return avg;
 //}
 
-//±íÀº º¹»ç¿Í ¾èÀº º¹»ç
-//±íÀº º¹»ç¸¦ ÇÒ ¶§ º¹»ç »ý¼ºÀÚ ÇÔ¼ö »ç¿ë
-//±íÀº º¹»ç ½Ã ¹«ÇÑ·çÇÁ°¡ ¹ß»ýÇÏ´Âµ¥ ¾îµð¼­ ²÷¾î¾ß ÇÏ´ÂÁö ¾Ë±â Èûµé ¼ö ÀÖÀ½
-//·¹ÆÛ·±½º º¯¼ö, Æ÷ÀÎÅÍ º¯¼ö¸¦ »ç¿ë ÇÒ ¶§ ¹Ù²î´ÂÁö ¾È¹Ù²î´ÂÁö È®ÀÎ ÈÄ const ¹Ýµå½Ã ½áÁÖ±â
+//ê¹Šì€ ë³µì‚¬ì™€ ì–•ì€ ë³µì‚¬
+//ê¹Šì€ ë³µì‚¬ë¥¼ í•  ë•Œ ë³µì‚¬ ìƒì„±ìž í•¨ìˆ˜ ì‚¬ìš©
+//ê¹Šì€ ë³µì‚¬ ì‹œ ë¬´í•œë£¨í”„ê°€ ë°œìƒí•˜ëŠ”ë° ì–´ë””ì„œ ëŠì–´ì•¼ í•˜ëŠ”ì§€ ì•Œê¸° íž˜ë“¤ ìˆ˜ ìžˆìŒ
+//ë ˆí¼ëŸ°ìŠ¤ ë³€ìˆ˜, í¬ì¸í„° ë³€ìˆ˜ë¥¼ ì‚¬ìš© í•  ë•Œ ë°”ë€ŒëŠ”ì§€ ì•ˆë°”ë€ŒëŠ”ì§€ í™•ì¸ í›„ const ë°˜ë“œì‹œ ì¨ì£¼ê¸°
 
-//¿¹Á¦ 5-9
+//ì˜ˆì œ 5-9
 
 //Circle() : Circle(1) {}
 //Circle(int radius) : radius(radius) {}
@@ -61,17 +61,17 @@
 //	Circle src(30);
 //	Circle dest(src);
 //
-//	cout << "¿øº»ÀÇ ¸éÀû = " << src.getArea() << endl;
-//	cout << "»çº»ÀÇ ¸éÀû = " << dest.getArea() << endl;
+//	cout << "ì›ë³¸ì˜ ë©´ì  = " << src.getArea() << endl;
+//	cout << "ì‚¬ë³¸ì˜ ë©´ì  = " << dest.getArea() << endl;
 //}
 
-//251p µðÆúÆ® º¹»ç »ý¼ºÀÚ
+//251p ë””í´íŠ¸ ë³µì‚¬ ìƒì„±ìž
 //class Book
 //{
 //	double price;
 //	int pages;
-//	char *title; // string title ÀÌ¶ó¸é ±íÀºº¹»ç (¾èÀºº¹»ç³ª ±íÀºº¹»ç³ª ´Ù¸¥°Ô ¾øÀ½)
-//	char *author; // string author ÀÌ¶ó¸é ±íÀºº¹»ç (¾èÀºº¹»ç³ª ±íÀºº¹»ç³ª ´Ù¸¥°Ô ¾øÀ½)
+//	char *title; // string title ì´ë¼ë©´ ê¹Šì€ë³µì‚¬ (ì–•ì€ë³µì‚¬ë‚˜ ê¹Šì€ë³µì‚¬ë‚˜ ë‹¤ë¥¸ê²Œ ì—†ìŒ)
+//	char *author; // string author ì´ë¼ë©´ ê¹Šì€ë³µì‚¬ (ì–•ì€ë³µì‚¬ë‚˜ ê¹Šì€ë³µì‚¬ë‚˜ ë‹¤ë¥¸ê²Œ ì—†ìŒ)
 //public:
 //	Book(double pr, int pa, char* t, char* a);
 //	~Book();
@@ -81,4 +81,4 @@
 //	pages(other.pages),
 //	title(other.title),
 //	author(other.author) {}
-
+//
